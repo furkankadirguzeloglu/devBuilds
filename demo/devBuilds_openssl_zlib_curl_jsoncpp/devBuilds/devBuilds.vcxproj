@@ -48,12 +48,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(ProjectDir)\Libraries\OpenSSL\Include;$(ProjectDir)\Libraries\zLib\Include;$(ProjectDir)\Libraries\cURL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)\Libraries\OpenSSL\Lib\x86;$(ProjectDir)\Libraries\zLib\Lib\x86;$(ProjectDir)\Libraries\cURL\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\Libraries\OpenSSL\Include;$(ProjectDir)\Libraries\zLib\Include;$(ProjectDir)\Libraries\cURL\Include;$(ProjectDir)\Libraries\jsoncpp\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\Libraries\OpenSSL\Lib\x86;$(ProjectDir)\Libraries\zLib\Lib\x86;$(ProjectDir)\Libraries\cURL\Lib\x86;$(ProjectDir)\Libraries\jsoncpp\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(ProjectDir)\Libraries\OpenSSL\Include;$(ProjectDir)\Libraries\zLib\Include;$(ProjectDir)\Libraries\cURL\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)\Libraries\OpenSSL\Lib\x64;$(ProjectDir)\Libraries\zLib\Lib\x64;$(ProjectDir)\Libraries\cURL\Lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\Libraries\OpenSSL\Include;$(ProjectDir)\Libraries\zLib\Include;$(ProjectDir)\Libraries\cURL\Include;$(ProjectDir)\Libraries\jsoncpp\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\Libraries\OpenSSL\Lib\x64;$(ProjectDir)\Libraries\zLib\Lib\x64;$(ProjectDir)\Libraries\cURL\Lib\x64;$(ProjectDir)\Libraries\jsoncpp\Lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -77,7 +77,8 @@
       <Command>copy /Y "$(ProjectDir)Libraries\OpenSSL\Bin\x86\libcrypto-3.dll" "$(TargetDir)"
 copy /Y "$(ProjectDir)Libraries\OpenSSL\Bin\x86\libssl-3.dll" "$(TargetDir)"
 copy /Y "$(ProjectDir)Libraries\zLib\Bin\x86\zlib1.dll" "$(TargetDir)"
-copy /Y "$(ProjectDir)Libraries\cURL\Bin\x86\libcurl.dll" "$(TargetDir)"</Command>
+copy /Y "$(ProjectDir)Libraries\cURL\Bin\x86\libcurl.dll" "$(TargetDir)"
+copy /Y "$(ProjectDir)Libraries\jsoncpp\Bin\x86\jsoncpp.dll" "$(TargetDir)"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -102,7 +103,8 @@ copy /Y "$(ProjectDir)Libraries\cURL\Bin\x86\libcurl.dll" "$(TargetDir)"</Comman
       <Command>copy /Y "$(ProjectDir)Libraries\OpenSSL\Bin\x64\libcrypto-3-x64.dll" "$(TargetDir)"
 copy /Y "$(ProjectDir)Libraries\OpenSSL\Bin\x64\libssl-3-x64.dll" "$(TargetDir)"
 copy /Y "$(ProjectDir)Libraries\zLib\Bin\x64\zlib1.dll" "$(TargetDir)"
-copy /Y "$(ProjectDir)Libraries\cURL\Bin\x64\libcurl.dll" "$(TargetDir)"</Command>
+copy /Y "$(ProjectDir)Libraries\cURL\Bin\x64\libcurl.dll" "$(TargetDir)"
+copy /Y "$(ProjectDir)Libraries\jsoncpp\Bin\x64\jsoncpp.dll" "$(TargetDir)"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
